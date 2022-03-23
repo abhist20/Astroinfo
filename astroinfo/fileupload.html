@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="p5/p5.js"></script>
+<title>Astroinfo</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body bgcolor="black">
+    <font size="6"
+    face="verdana"
+    color="green">
+      This site is for Astrophotographers. &#128301
+    </font>
+    <input type="file" id="inp">
+    <?php 
+
+    ?>
+    <script>
+        document.querySelector('#inp').addEventListener("change", function (){
+            const reader = new FileReader();
+            reader.addEventListener("load",() =>{
+                localStorage.setItem("ri",reader.result);
+            }); 
+            var a = document.createElement("a"),
+                url = reader.result;
+                a.href = url;
+                a.download='download';
+            console.log(reader);
+            reader.readAsDataURL(this.files[0]);
+        });
+    </script>
+</body>
+
+</html>

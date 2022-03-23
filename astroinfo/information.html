@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Astroinfo</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style> #map { height: 400px;width: 600px; align-items: bottom; } </style>
+</head>
+<body bgcolor="black">
+    <font size="6"
+    face="verdana"
+    color="green">
+      This site is for Astrophotographers. &#128301
+    </font>
+      <!-- <a href="https://www.lightpollutionmap.info/" target="_blank">Light pollution map </a> -->
+    <br>
+    <br>
+    <br>
+    <iframe src="https://www.lightpollutionmap.info/" title="Light Map" align="right" height="400" width="600"></iframe> 
+    <div id="map"></div>
+    <font size="2"
+    face="verdana"
+    color="green">
+    <script src="map.js"></script><p id="loc"></p>
+    </font>
+    <script src="weather.js"></script>
+    <input type="button"  value="Locate me!" id="heloc" onClick="javascript:getLocationLeaflet();javascript:getwether();"></input>
+    
+    <section class="display" >
+      LOCATION WEATHER
+      <div class="wrapper" align="right" >
+        cloudcover
+        <p id="cc"></p>
+        temp
+        <p id="temp"></p>
+        weather
+        <p id="weather"></p>
+        windspeed
+        <p id="wind"></p>
+      </div>
+    </section>
+</body>
+</html>

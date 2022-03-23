@@ -1,21 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Astroinfo</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-   crossorigin=""></script>
-<link rel="stylesheet" type="text/css" href="style.css">
-<style> #map { height: 600px;width: 800px; align-items: bottom; } </style>
-</head>
-<body bgcolor="black">
-    <font size="16"
-    face="verdana"
-    color="green">
-      This site is for Astrophotographers. &#128301
-    <div id="map"></div>
-    <script src="map.js"></script>
-    </font>
-</body>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroINFO</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="#home" id="navbar__logo">AstroINFO</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> 
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="gallery.html" class="navbar__links" id="Explore">Explore</a>
+          </li>
+          <li class="navbar__item">
+            <a href="information.html" class="navbar__links" id="Maps">Maps</a>
+          </li>
+          <li class="navbar__item">
+            <a href="aboutis.html" class="navbar__links" id="AboutUs"
+              >About Us</a
+            >
+          </li>
+          <li class="navbar__btn">
+            <a href="fileupload.html" class="button" id="upload">Upload</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+      <div class="hero__container">
+        <h1 class="hero__heading"><span>Have a new click?</span></h1>
+        <p class="hero__description">Post your clicks</p>
+        <button class="main__btn"><a href="fileupload.html">Upload</a></button>
+      </div>
+    </div>
+
+    <!-- Top pics Section -->
+    <div class="topPick" id="topPick">
+      <h1>View Top Picks</h1>
+      <div class="topPick__wrapper">
+        <div class="topPick__card">
+          <img src="Photos\photo1.jpg" alt="Shivam Bhatia / 2022" style="height: 100%">
+        </div>
+        <div class="topPick__card">
+          <img src="Photos\photo2.jpg" alt="Shivam Bhatia / 2022" style="height: 100%">
+        </div>
+        <div class="topPick__card">
+          <img src="Photos\photo3.jpg" alt="Shivam Bhatia / 2022" style="height: 100%">
+        </div>
+        <div class="topPick__card">
+          <img src="Photos\photo4.jpg" alt="Shivam Bhatia / 2022" style="height: 100%">
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+      <div class="footer__links">
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <a href="/">All photos</a> 
+            <a href="/">Top Picks</a>
+            <a href="/">Picture of the day</a> 
+          </div>
+
+          <div class="footer__link--items">
+            <a href="aboutis.html" >About US</a>
+            <a href="aboutis.html">Contact Us</a>
+          </div>
+        </div>
+      </div>
+      <section class="social__media">
+        <div class="social__media--wrap">
+          <div class="footer__logo">
+            <a href="/" id="footer__logo">AstroINFO</a>
+          </div>
+          <p class="website__rights">© AstroINFO 2022. All rights reserved</p>
+          <div class="social__icons">
+            <a href="/" class="social__icon--link" target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="/" class="social__icon--link"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="/" class="social__icon--link"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="/" class="social__icon--link"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="/" class="social__icon--link"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
 </html>
